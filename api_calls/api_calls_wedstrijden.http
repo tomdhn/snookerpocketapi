@@ -1,0 +1,30 @@
+@base_URL = http://localhost:3001/api/wedstrijden
+
+### get all wedstrijden
+
+GET {{base_URL}}
+
+### get wedstrijd by id
+
+GET {{base_URL}}/65f7fa033a7701f453d33f8b
+
+### create wedstrijd
+
+POST {{base_URL}}/
+Content-Type: application/json
+
+{
+  "datum": "2024-03-16T00:00:00.000Z",
+  "resultaat": "X",
+  "thuis": "Antwerp",
+  "uit": "Oostende"
+}
+
+### add wedstrijdVote
+
+POST {{base_URL}}/65f7fa033a7701f453d33f8b/votes
+Content-Type: application/json
+
+{
+  "wedstrijdVotes": ["65f7fafbe7924fbf25c4b976"]
+}

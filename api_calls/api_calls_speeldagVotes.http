@@ -1,0 +1,20 @@
+@base_URL = http://localhost:3001/api/speeldagVotes
+
+### get all speeldagVotes
+
+GET {{base_URL}}
+
+### get speeldagVotes by id
+
+GET {{base_URL}}/1
+
+### create speeldagVote
+
+POST {{base_URL}}
+Content-Type: application/json
+
+{
+  "users": "65fc4b910acf842970638543",
+  "jokerGebruikt": true,
+  "SchiftingsvraagAntwoord": 42
+}

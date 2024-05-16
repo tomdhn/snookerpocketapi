@@ -1,0 +1,23 @@
+@base_URL = http://localhost:3001/api/users
+
+### get all users
+
+get {{base_URL}}
+
+### get by id
+
+get {{base_URL}}/65f592e8fa0b11de322fd820
+
+### post a new user
+
+post {{base_URL}}
+Content-Type: application/json
+
+{
+    "admin": false,
+    "betaald": false,
+    "username": "admin",
+    "email": "test@test.test",
+    "password": "testtest"
+}
+

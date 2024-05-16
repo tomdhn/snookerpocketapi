@@ -1,0 +1,41 @@
+@base_URL = http://localhost:3001/api/speeldagen
+
+### get all speeldagen
+
+get {{base_URL}}
+
+### get speeldag by id
+
+get {{base_URL}}/65fc4c5a9f72f911935a4bbe
+
+### add new speeldag
+
+post {{base_URL}}/
+Content-Type: application/json
+
+{
+  "schiftingsvraag": "Aantal doelen deze week",
+  "schiftingsantwoord": 3
+}
+
+### get wedstrijden from speeldag
+
+get {{base_URL}}/65fc4c5a9f72f911935a4bbe/wedstrijden
+
+### add wedstrijd to speeldag
+post {{base_URL}}/65fc4c5a9f72f911935a4bbe/wedstrijd
+Content-Type: application/json
+
+{
+  "wedstrijdId": "65fc4c719f72f911935a4bc0"
+}
+
+
+### add speeldagVotes to speeldag
+
+post {{base_URL}}//speeldagVotes
+content-type: application/json
+
+{
+  "speeldagVote": "65fd6c680bbce518c9e85bec"
+}

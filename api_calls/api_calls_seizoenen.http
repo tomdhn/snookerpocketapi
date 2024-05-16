@@ -1,0 +1,42 @@
+@base_URL = http://localhost:3000/api/seizoenen
+
+### get all seasons
+
+get {{base_URL}}
+
+### get 1 season
+
+get {{base_URL}}/65f5af0296172836e6d984bc
+
+### create a season
+
+post {{base_URL}}/
+Content-Type: application/json
+
+{
+  "bevriesKlassement": false,
+  "seizoenBeeindigd": false
+}
+
+#  "klassement": ["612345678901234567890123", "612345678901234567890124"],
+#  "speeldagen": ["612345678901234567890125", "612345678901234567890126"],
+
+
+### patch a season
+
+patch {{base_URL}}/65f5af0296172836e6d984bc
+Content-Type: application/json
+
+{
+  "bevriesKlassement": false,
+  "seizoenBeendigd": true
+}
+
+### get all speeldagen
+
+get {{base_URL}}/65f5af0196172836e6d984ba/speeldagen
+
+### add a speeldag
+
+post {{base_URL}}/65f5a199ad0bad22e8c0a365/speeldagen/
+

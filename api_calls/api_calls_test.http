@@ -1,0 +1,21 @@
+@base_URL = http://localhost:3000/api/speeldagen
+
+### get all speeldagen
+
+get {{base_URL}}
+
+### get speeldag by id
+
+get {{base_URL}}/65f5ae83b0355d9c2bee913b
+
+### add new speeldag
+
+post {{base_URL}}/
+Content-Type: application/json
+
+{
+  "schiftingsvraag": "Aantal doelen deze week",
+  "schiftingsantwoord": 3
+}
+
+### add wedstrijd to speeldag

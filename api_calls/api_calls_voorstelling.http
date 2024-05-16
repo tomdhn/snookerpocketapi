@@ -1,0 +1,16 @@
+@base_URL = http://localhost:3000/api/seizoenen
+
+### add new User
+
+post {{base_URL}}
+Content-Type: application/json
+
+{
+    "admin": false,
+    "betaald": true,
+    "username": "test",
+    "email": "test@test.test",
+    "password": "testtest123"
+}
+
+###

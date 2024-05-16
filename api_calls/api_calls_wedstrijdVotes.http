@@ -1,0 +1,19 @@
+@base_URL = http://localhost:3001/api/wedstrijdVotes
+
+### get all wedstrijdVotes
+
+GET {{base_URL}}
+
+### get wedstrijdVotes by id
+
+GET {{base_URL}}/65f7fafbe7924fbf25c4b976
+
+### create wedstrijdVotes
+
+POST {{base_URL}}
+Content-Type: application/json
+
+{
+  "vote": "1",
+  "wedstrijd": "65fd60ff14b31cdced58fc96"
+}

@@ -1,0 +1,64 @@
+CMDS:
+  npm run dev (= opstarten)
+  npm run swagger-autogen (= swagger documentatie endpoints regenereren)
+    --> http://localhost:3000/api-docs
+
+API:::: 
+🟩 = done
+🟧 = Planned
+🟥 = Not Yet Planned
+⬛ = Never planned / For dev only
+⬜ = VOOR VOLGENDE LES
+
+SEIZOEN:
+  🟢GET   /api/seizoenen			  |🟩| get all seizoenen
+  🔵POST	/api/seizoenen			  |🟩| add new seizoen
+  🟢GET	  /api/seizoenen/{id}		|🟩| get 1 seizoen
+  🟡PATCH	/api/seizoenen/{id}		|🟩| voor aanpassen (bevriesKlassement, seizoenBeeindigd,...)
+  🔴DEL	  /api/seizoenen/{id}		|🟩| verwijderen seizoen
+
+  🟢GET	  /api/seizoenen/{id}/speeldagen	|🟩| get alle speeldagen in seizoen
+  🔵POST	/api/seizoenen/{id}/speeldagen	|🟩| voeg speeldag toe aan seizoen
+
+  🟢GET	  /api/seizoenen/{id}/klassement	|⬜| geeft seizoensklassement terug
+  🔵POST	/api/seizoenen/{id}/klassement	|⬜| update klassement (EMPTY BODY)
+
+SPEELDAG:
+  ⚫GET   /api/speeldagen		   |⬛| // @Seizoen
+  ⚫POST  /api/speeldagen		   |⬛| // @Seizoen
+  🟢GET   /api/speeldagen/{id}	|🟩| get 1 speeldag
+  🟡PATCH	/api/speeldagen/{id}	|🟧| voor aanpassen
+  🔴DEL	  /api/speeldagen/{id}	|🟧| verwijderen speeldag
+
+  🟢GET	  /api/speeldagen/{id}/wedstrijden	|🟩| get alle wedstrijden in speeldag
+  🔵POST	/api/speeldagen/{id}/wedstrijden	|🟩| voeg wedstrijd toe aan seizoen (speeldag)
+
+  ⚫GET   /api/speeldagen/{id}/speeldagVotes  |⬛| // only used to gen klassement
+  🔵PUT	  /api/speeldagen/{id}/speeldagVotes	|🟧| ++ Speeldagvote -> { userId, ...} # ⬜NIET VERGETEN TE CHECKEN OF JOKER GEBRUIKT KAN WORDEN!!!⬜
+
+  🟢GET	  /api/speeldagen/{id}/klassement	|🟩| geeft speeldagklassement terug
+  🔵POST	/api/speeldagen/{id}/klassement	|🟩| update klassement (EMPTY BODY)
+
+Wedstrijd:
+  ⚫GET   /api/wedstrijd          |⬛| // @Speeldag
+  ⚫POST  /api/wedstrijd          |⬛| // @Speeldag
+  🟢GET	  /api/wedstrijd/{id}     |🟩| get 1 wedstrijd
+  🟡PATCH	/api/wedstrijd/{id}			|🟧| voor aanpassen ()
+  🔴DEL   /api/wedstrijd/{id}			|🟧| verwijderen wedstrijd
+
+User:
+  🟢GET   /api/users      |🟩| get all users
+  🟢GET   /api/users/{id} |🟩| get one user
+  🔵POST	/api/users      |🟩| add new user
+
+
+
+
+	
+
+
+
+
+
+
+	
